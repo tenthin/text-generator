@@ -1,11 +1,10 @@
 import './App.css';
 import React, {Component} from 'react';
 import axios from 'axios';
-import { render } from '@testing-library/react';
 
 
 class App extends Component {
-  construct(props) {
+  constructor(props) {
     super(props);
     this.state = {
       paras: 4,
