@@ -12,6 +12,11 @@ const App = () => {
 
   useEffect(() =>{
     const url = `https://baconipsum.com/api/?type=all-meat&paras=${inputValue}&start-with-lorem=1`;
+
+
+    fetch(url)
+    .then(res => res.json())
+    .then(data => console.log(data))
   },[])
   return (
     <div className="App">
