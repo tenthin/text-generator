@@ -17,7 +17,7 @@ const App = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setParagraphs(data))
-  },[])
+  },[inputValue])
   return (
     <div className="App">
       <div className="container">
