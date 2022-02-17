@@ -24,7 +24,15 @@ const App = () => {
         <div className="title">
           <h1>Lorem Ipsum Text Generator</h1>
         </div>
-        <Options/>
+        <Options
+          paragraphs={paragraphs}
+          includeHtml={includeHtml}
+          setIncludeHtml={setIncludeHtml}
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          tag={tag}
+          setTag={setTag}
+        />
       </div>
     </div>
   );
