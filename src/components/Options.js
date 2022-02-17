@@ -1,4 +1,5 @@
 import React from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Options = (props) => {
     const {paragraphs,includeHtml,setIncludeHtml,inputValue,setInputValue,tag,setTag} = props;
@@ -40,7 +41,11 @@ const Options = (props) => {
                     </div>
                 </div>
                 <div className="copy">
-                    <p>Copy to Clipboard</p>
+                    <CopyToClipboard 
+                        text={paragraphs.map(sentence => includeHtml === "Yes" ? `<${tag}>${sentence}</${tag}>`:sentence)}
+                    >
+                        <button>Copy to clipboard</button>
+                    </CopyToClipboard>
                 </div>
             </div>
         </div>
