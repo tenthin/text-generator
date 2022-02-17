@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState,useEffect} from 'react';
-
+import Options from './components/Options'
 
 
 const App = () => {
@@ -15,12 +15,17 @@ const App = () => {
 
 
     fetch(url)
-    .then(res => res.json())
-    .then(data => console.log(data))
+      .then(res => res.json())
+      .then(data => setParagraphs(data))
   },[])
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <div className="container">
+        <div className="title">
+          <h1>Lorem Ipsum Text Generator</h1>
+        </div>
+        <Options/>
+      </div>
     </div>
   );
 };
