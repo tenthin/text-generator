@@ -20,7 +20,7 @@ const Options = (props) => {
                     </div>
                     <div className="tags">
                         <p>Tags: </p>
-                        <select>
+                        <select defaultValue={tag} onChange={e =>setTag(e.target.value)}>
                             <option value="p">&lt;p&gt;</option>
                             <option value="h1">&lt;h1&gt;</option>
                             <option value="h2">&lt;h2&gt;</option>
