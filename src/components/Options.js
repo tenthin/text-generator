@@ -15,6 +15,7 @@ const Options = (props) => {
                             min="1" 
                             max="10"
                             value={inputValue}
+                            onChange={e => setInputValue(e.target.value)}
                         />
                     </div>
                     <div className="tags">
