@@ -33,7 +33,7 @@ const App = () => {
           tag={tag}
           setTag={setTag}
         />
-        <Output paragraphs={paragraphs} tag={tag}/>
+        <Output paragraphs={paragraphs} tag={tag} includeHtml={includeHtml}/>
       </div>
     </div>
   );
