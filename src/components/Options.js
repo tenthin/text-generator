@@ -33,7 +33,7 @@ const Options = (props) => {
                     </div>
                     <div className="include">
                         <p>Include HTML: </p>
-                        <select>
+                        <select defaultValue={includeHtml} onChange={e => setIncludeHtml(e.target.value)}>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
