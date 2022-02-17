@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState,useEffect} from 'react';
 import Options from './components/Options'
-
+import Output from './components/Output'
 
 const App = () => {
   const[paragraphs,setParagraphs] = useState([]);
@@ -15,8 +15,8 @@ const App = () => {
 
 
     fetch(url)
-      .then(res => res.json())
-      .then(data => setParagraphs(data))
+      .then((res) => res.json())
+      .then((data) => setParagraphs(data))
   },[])
   return (
     <div className="App">
@@ -33,6 +33,7 @@ const App = () => {
           tag={tag}
           setTag={setTag}
         />
+        <Output paragraphs={paragraphs} tag={tag}/>
       </div>
     </div>
   );
